@@ -12,7 +12,7 @@ function replaceTabs( &$skin, &$links) {
         $links['views']['subpage'] = array(
                 'class' => false, // false or 'selected', defines whether the tab should be highlighted
                 'text' => 'Unterseite erstellen', // what the tab says
-                'href' => "https://$_SERVER[HTTP_HOST]/wiki/CreatePage?superpage=".explode("?", str_replace("/wiki/", "", "$_SERV$
+                'href' => "https://$_SERVER[HTTP_HOST]/wiki/CreatePage?superpage=".explode("?", str_replace("/wiki/", "", "$_SERVER[REQUEST_URI]"))[0],
         );
         return true;
 }
